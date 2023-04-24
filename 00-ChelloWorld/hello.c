@@ -1,7 +1,12 @@
 #include <stdio.h>
 
 int main(void) {
-    printf("Hello, World!");
+    FILE *output;
+    output = fopen("output.txt", "w");
+
+    fprintf(output, "Hello, World!");
+
+    fclose(output);
 
     return 0;
 }
